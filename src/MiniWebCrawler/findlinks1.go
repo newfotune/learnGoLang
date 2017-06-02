@@ -9,6 +9,12 @@ import (
 )
 
 func main() {
+	var iBuffer [10]int
+	slice := iBuffer[0:0]
+	fmt.Println(cap(slice))
+	fmt.Println(len(slice))
+	//func add1(r rune) rune { return r + 1}
+
 	doc, err := html.Parse(os.Stdin)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "findlinks1: %v\n", err)
